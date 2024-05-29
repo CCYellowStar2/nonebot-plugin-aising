@@ -27,7 +27,7 @@ __plugin_meta__ = PluginMetadata(
     usage="让爱丽丝唱冬之花(两边支持bv号) 设置唱歌链接(你的后端公开链接) 设置唱歌开始时间0(默认30秒开始)",
     supported_adapters={"~onebot.v11"},
     type="application",
-    homepage="https://github.com/Noctulus/nonebot-plugin-ernie"
+    homepage="https://github.com/CCYellowStar2/nonebot-plugin-aising"
 )
 
 timee=30
