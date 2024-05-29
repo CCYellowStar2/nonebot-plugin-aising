@@ -67,6 +67,9 @@ _✨ 能让b站任何能搜到素材的角色唱歌 ✨_
 
 </details>
 
+### 后端的本地部署
+在本地克隆```git clone https://huggingface.co/spaces/CCYellowStar/NeuCoSVC-2```这个项目，随后在这个目录```pip install -r requirements.txt```安装依赖  
+解决了各种安装依赖的问题后，就可以```python app_colab.py```运行了
 
 ## 🎉 使用
 ### 指令表
@@ -81,6 +84,6 @@ _✨ 能让b站任何能搜到素材的角色唱歌 ✨_
 ## 💡 鸣谢
 
 ### [NeuCoSVC](https://github.com/thuhcsi/NeuCoSVC)
-### [NeuCo v2](https://www.bilibili.com/video/BV1fz42127wX/)
 - 后端原项目
+### [NeuCo v2](https://www.bilibili.com/video/BV1fz42127wX/)
 
