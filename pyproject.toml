@@ -2,7 +2,7 @@
 name = "nonebot-plugin-aising"
 version = "0.1.0"
 description = "能让b站任何能搜到素材的角色唱歌"
-authors = ["CCYellowStar"]
+authors = ["CCYellowStar","syagina"]
 license = "GPL-3.0-only"
 readme = "README.md"
 homepage = "https://github.com/CCYellowStar2/nonebot-plugin-aising"
@@ -12,6 +12,7 @@ repository = "https://github.com/CCYellowStar2/nonebot-plugin-aising"
 python = ">=3.8,<4"
 nonebot2 = ">=2.0.0-beta.1"
 gradio_client = "^0.16.4"
+nonebot-adapter-onebot = ">=2.2.3"
 
 
 [build-system]
