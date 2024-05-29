@@ -5,7 +5,7 @@ description = "能让b站任何能搜到素材的角色唱歌"
 authors = [
     {name = "CCYellowStar", email = "1147036991@qq.com"},
 ]
-license = {text = "GPL-3.0-only"}
+license = "GPL-3.0-only"
 readme = "README.md"
 homepage = "https://github.com/CCYellowStar2/nonebot-plugin-aising"
 repository = "https://github.com/CCYellowStar2/nonebot-plugin-aising"
