@@ -86,4 +86,6 @@ _✨ 能让b站任何能搜到素材的角色唱歌 ✨_
 ### [NeuCoSVC](https://github.com/thuhcsi/NeuCoSVC)
 - 后端原项目
 ### [NeuCo v2](https://www.bilibili.com/video/BV1fz42127wX/)
-
+- 后端项目
+### [syagina](https://github.com/syagina)
+- 巨大贡献
