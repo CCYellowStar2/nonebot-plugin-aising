@@ -9,8 +9,8 @@ homepage = "https://github.com/CCYellowStar2/nonebot-plugin-aising"
 repository = "https://github.com/CCYellowStar2/nonebot-plugin-aising"
 
 [tool.poetry.dependencies]
-python = ">=3.8,<4"
-nonebot2 = ">=2.0.0-beta.1"
+python = ">=3.9,<4"
+nonebot2 = ">=2.2.1"
 gradio_client = "^0.16.4"
 nonebot-adapter-onebot = ">=2.2.3"
 
