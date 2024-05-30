@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot-plugin-aising"
-version = "0.1.1"
+version = "0.1.2"
 description = "能让b站任何能搜到素材的角色唱歌"
 authors = ["CCYellowStar","syagina"]
 license = "GPL-3.0-only"
