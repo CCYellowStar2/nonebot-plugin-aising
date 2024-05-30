@@ -5,7 +5,7 @@ from pathlib import Path
 from gradio_client import Client, file
 import time
 from nonebot.permission import SUPERUSER
-from nonebot import on_command ,on_message
+from nonebot import require ,on_command ,on_message
 import os
 from nonebot.adapters.onebot.v11 import (
     Bot,
@@ -20,6 +20,8 @@ from nonebot.typing import T_State
 from nonebot.params import Depends
 from nonebot.plugin import PluginMetadata
 from functools import partial
+require("nonebot_plugin_localstore")
+import nonebot_plugin_localstore as store
 
 __plugin_meta__ = PluginMetadata(
     name="ai唱歌",
@@ -34,7 +36,7 @@ timee=30
 URL = ""
 init = True
 processing = False
-filepath = Path()/"Aising_URL.txt"
+filepath: Path = store.get_config_file("aising", "Aising_URL.txt")
 
 REGEX_DICT = "REGEX_DICT"
 REGEX_ARG = "REGEX_ARG"
