@@ -26,7 +26,7 @@ import nonebot_plugin_localstore as store
 __plugin_meta__ = PluginMetadata(
     name="ai唱歌",
     description="能让b站任何能搜到素材的角色唱歌",
-    usage="让爱丽丝唱冬之花(两边支持bv号) 设置唱歌链接(你的后端公开链接) 设置唱歌开始时间0(默认30秒开始)",
+    usage="让爱丽丝唱冬之花(两边支持bv号) 设置唱歌链接(你的后端公开链接) 设置唱歌开始时间0(默认30秒开始) 设置唱歌音调12(-12到12)",
     supported_adapters={"~onebot.v11"},
     type="application",
     homepage="https://github.com/CCYellowStar2/nonebot-plugin-aising"
@@ -34,6 +34,7 @@ __plugin_meta__ = PluginMetadata(
 
 timee=30
 URL = ""
+pich=0
 init = True
 processing = False
 filepath: Path = store.get_config_file("aising", "Aising_URL.txt")
@@ -94,6 +95,7 @@ async def voicHandler(
 ):
     print(name+" "+text)
     global URL
+    global pich
     global timee
     global init
     global processing
@@ -128,8 +130,8 @@ async def voicHandler(
             None,	# str (filepath on your computer (or URL) of file) in '从本地上传一段想要AI翻唱的音频。需要为去除伴奏后的音频，此程序将自动提取前45秒的音频；如果您希望通过歌曲名搜索在线音频，请勿在此上传音频文件' Audio component
             None,	# str (filepath on your computer (or URL) of file) in '从本地上传一段音色参考音频。需要为去除伴奏后的音频，建议上传长度为60~90s左右的.wav文件；如果您希望通过歌曲名搜索在线音频，请勿在此上传音频文件' Audio component
             True,	# bool  in '参考音频是否为歌曲演唱，默认为是' Checkbox component
-            True,	# bool  in '是否自动预测歌曲人声升降调，默认为是' Checkbox component
-            0,	# float (numeric value between -12 and 12) in '歌曲人声升降调' Slider component
+            False,	# bool  in '是否自动预测歌曲人声升降调，默认为是' Checkbox component
+            pich,	# float (numeric value between -12 and 12) in '歌曲人声升降调' Slider component
             3,	# float (numeric value between -3 and 3) in '调节人声音量，默认为0' Slider component
             -1,	# float (numeric value between -3 and 3) in '调节伴奏音量，默认为0' Slider component
             api_name="/convert"
@@ -196,3 +198,23 @@ async def _(
     
     timee = int(keyword)
     await set_time.send(f"已设置唱歌时间为{timee}")
+
+set_pich = on_command("设置唱歌音调", block=True, priority=5)
+
+@set_pich.handle()
+async def _(state: T_State, msg: Message = CommandArg()):
+    text = msg.extract_plain_text().strip()
+    if msg:
+        state["url"] = text
+        
+@set_pich.got("url", prompt="请输入要设定的音调（-12到12）")
+async def _(
+    bot: Bot,
+    event: MessageEvent,
+    state: T_State,
+    keyword: str = ArgStr("url"),
+):  
+    global pich
+    
+    pich = int(keyword)
+    await set_time.send(f"已设置唱歌音调为{pich}")
