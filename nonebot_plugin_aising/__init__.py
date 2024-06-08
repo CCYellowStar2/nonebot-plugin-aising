@@ -116,7 +116,7 @@ async def voicHandler(
             substring_not_in_arg = False
             break
 
-    if substring_not_in_arg:
+    if substring_not_in_arg and not name.startswith("BV"):
         name="AI "+name
     aa = time.perf_counter()
     try:
