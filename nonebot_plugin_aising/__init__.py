@@ -144,8 +144,7 @@ async def voicHandler(
         end_time = asyncio.get_running_loop().time()
         total_time = end_time - aa 
         location=result
-        file_uri = Path(location).as_uri()
-        await voice.send(MessageSegment.record(file_uri))
+        await voice.send(MessageSegment.record(Path(location).read_bytes()))
         await voice.send(f"唱歌生成时间：本次用时 {total_time:.2f} seconds.") 
         processing = False
     except Exception as e:
