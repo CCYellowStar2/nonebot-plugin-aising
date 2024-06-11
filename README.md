@@ -24,7 +24,7 @@ _✨ 能让b站任何能搜到素材的角色唱歌 ✨_
 
 ## 📖 介绍
 
-使用[NeuCo v2](https://www.bilibili.com/video/BV1fz42127wX/)作为后端，bot作为前端调用的ai唱歌插件，通过爬取b站视频再加上急速训练来做到只要b站上有这个角色的素材就能让这个角色唱b站上有的任何歌，插件可使用```设置唱歌链接```来指定后端链接达到随时更换，后端搭建可以本地也可以[colab](https://colab.research.google.com/drive/102KeOMpmz8Y7m0I3NMSv3orIOBUmNGir?usp=sharing)
+使用[NeuCo v2](https://huggingface.co/spaces/CCYellowStar/NeuCoSVC-2)作为后端，bot作为前端调用的ai唱歌插件，通过爬取b站视频再加上急速训练来做到只要b站上有这个角色的素材就能让这个角色唱b站上有的任何歌，插件可使用```设置唱歌链接```来指定后端链接达到随时更换，后端搭建可以本地也可以[colab](https://colab.research.google.com/drive/102KeOMpmz8Y7m0I3NMSv3orIOBUmNGir?usp=sharing)
 
 ## 💿 安装
 
@@ -87,20 +87,21 @@ _✨ 能让b站任何能搜到素材的角色唱歌 ✨_
 ### [NeuCoSVC](https://github.com/thuhcsi/NeuCoSVC)
 - 后端原项目
 ### [NeuCo v2](https://www.bilibili.com/video/BV1fz42127wX/)
-- 后端项目
+- 后端项目视频
 ### [syagina](https://github.com/syagina)
 - 巨大贡献
 
 ## 🦜 更新日志
 
+### 2024.06.11
+
+#### 插件端更新
+- 修复llonebot发送语音问题 [#5](https://github.com/CCYellowStar2/nonebot-plugin-aising/pull/5)
+#### 后端更新（请重新克隆并更新依赖）
+- 修复小于60秒的音频生成截取时间问题
+- 给音频加了点压缩和混响，缓解人声干燥问题
+
 ### 2024.06.08
 
 - 音调自动预测改为使用手动设定
 - 增加音调调节功能
-
-### 2024.06.11
-#### 插件端更新
-- 修复llonebot发送语音问题
-#### 后端更新（请重新克隆并更新依赖）
-- 修复小于60秒的音频生成截取时间问题
-- 给音频加了点压缩和混响，缓解人声干燥问题
