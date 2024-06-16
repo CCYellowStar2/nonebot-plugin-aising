@@ -69,7 +69,8 @@ _✨ 能让b站任何能搜到素材的角色唱歌 ✨_
 
 ### 后端的本地部署
 在本地克隆```git clone https://huggingface.co/spaces/CCYellowStar/NeuCoSVC-2```这个项目，随后在这个目录```pip install -r requirements.txt```安装依赖  
-解决了各种安装依赖的问题后，就可以```python app_colab.py```运行了
+解决了各种安装依赖的问题后，就可以```python app_colab.py```运行了  
+或者使用我的[win一键包](http://123.ccyacg.xyz/1816807621/1/NeuCoSVC-2%E4%B8%80%E9%94%AE%E5%8C%85%EF%BC%88%E8%A7%A3%E5%8E%8B%E5%88%B0%E9%9D%9E%E4%B8%AD%E6%96%87%E7%9B%AE%E5%BD%95%EF%BC%89.7z)(理论上Linux也可以用，只要手动启动)
 
 ## 🎉 使用
 ### 指令表
